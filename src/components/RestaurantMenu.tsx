@@ -15,13 +15,19 @@ export default function RestaurantMenu() {
   }));
 
   const handleCategoryClick = (categoryId: string) => {
-    
-    // Scroll to category section
+    // Get header height dynamically
+    const headerElement = document.querySelector('header');
     const categoryElement = document.getElementById(`category-${categoryId}`);
-    if (categoryElement) {
-      categoryElement.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start' 
+    
+    // Both elements should exist at this point
+    if (headerElement && categoryElement) {
+      const headerHeight = headerElement.offsetHeight;
+      const elementPosition = categoryElement.offsetTop;
+      const offsetPosition = elementPosition - headerHeight - 16; // Add 16px padding
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
       });
     }
   };
@@ -31,9 +37,15 @@ export default function RestaurantMenu() {
     let observer: IntersectionObserver | null = null;
 
     const setupObserver = () => {
+      // Get header height dynamically
+      const headerElement = document.querySelector('header');
+      
+      if (!headerElement) return; // Exit if header not found
+      
+      const headerHeight = headerElement.offsetHeight;
       const observerOptions = {
         root: null,
-        rootMargin: '-160px 0px -50% 0px', // Account for sticky header height
+        rootMargin: `-${headerHeight + 16}px 0px -50% 0px`, // Account for sticky header height + padding
         threshold: [0.1, 0.3, 0.5]
       };
 
@@ -102,6 +114,7 @@ export default function RestaurantMenu() {
               id={`category-${category.id}`} 
               data-category={category.id}
               className="space-y-3"
+              style={{ scrollMarginTop: '180px' }} // CSS fallback for scroll offset
             >
               <div className="flex items-center gap-2 mt-8 first:mt-0">
                 <h3 className="text-lg font-semibold text-foreground">{category.name}</h3>
