@@ -1,6 +1,7 @@
 import { ChefHat, MapPin, Clock } from 'lucide-react';
 import { restaurantInfo } from '../data/menuData';
 import { ModeToggle } from './ModeToggle';
+import { Button } from './ui/button';
 
 interface RestaurantHeaderProps {
   activeCategory?: string;
@@ -55,17 +56,15 @@ export default function RestaurantHeader({
       <div className="px-4 pb-3 border-t border-border">
         <div className="flex gap-2 overflow-x-auto pt-3">
           {categories.map((category) => (
-            <button
+            <Button
               key={category.id}
               onClick={() => onCategoryClick(category.id)}
-              className={`flex-shrink-0 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-full border ${
-                activeCategory === category.id
-                  ? 'bg-primary text-primary-foreground border-primary'
-                  : 'bg-card text-muted-foreground border-border hover:bg-muted'
-              }`}
+              variant={activeCategory === category.id ? "default" : "outline"}
+              size="sm"
+              className="flex-shrink-0 rounded-full min-w-fit border border-transparent data-[variant=outline]:border-border"
             >
               {category.name}
-            </button>
+            </Button>
           ))}
         </div>
       </div>
