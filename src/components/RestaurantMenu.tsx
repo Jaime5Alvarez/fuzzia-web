@@ -87,9 +87,6 @@ export default function RestaurantMenu() {
     >
       <div 
         className="min-h-screen bg-background"
-        style={{ 
-          paddingBottom: 'var(--app-nav-height)' // Space for bottom nav
-        }}
       >
         <RestaurantHeader
           activeCategory={activeCategory}
