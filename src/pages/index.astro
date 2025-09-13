@@ -1,22 +1,19 @@
 ---
 import '../styles/global.css';
-// Component Imports
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import RestaurantMenu from '../components/RestaurantMenu';
 ---
 
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
+		<title>Fuzzia - Carta Digital</title>
+		<meta name="description" content="Nuestra deliciosa carta digital con los mejores platos" />
 	</head>
 
-	<body>
-		
-		</div>
+	<body class="dark bg-background text-foreground min-h-screen">
+		<RestaurantMenu client:load />
 	</body>
 </html>
