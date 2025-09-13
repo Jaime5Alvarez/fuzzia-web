@@ -53,7 +53,7 @@ export default function RestaurantHeader({
 
       {/* Categories Navigation */}
       <div className="px-4 pb-3 border-t border-border">
-        <div className="flex gap-2 overflow-x-auto scrollbar-hide pt-3">
+        <div className="flex gap-2 overflow-x-auto pt-3">
           {categories.map((category) => (
             <button
               key={category.id}
