@@ -1,5 +1,6 @@
 import { ChefHat, MapPin, Clock } from 'lucide-react';
 import { restaurantInfo } from '../data/menuData';
+import { ModeToggle } from './ModeToggle';
 
 interface RestaurantHeaderProps {
   activeCategory?: string;
@@ -16,18 +17,21 @@ export default function RestaurantHeader({
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       {/* Restaurant Info */}
       <div className="px-4 py-4">
-        <div className="flex items-center gap-3 mb-3">
-          <div className="p-2 rounded-full bg-primary text-primary-foreground">
-            <ChefHat size={20} />
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-3">
+            <div className="p-2 rounded-full bg-primary text-primary-foreground">
+              <ChefHat size={20} />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold text-foreground">
+                {restaurantInfo.name}
+              </h1>
+              <p className="text-sm text-muted-foreground">
+                {restaurantInfo.tagline}
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-2xl font-bold text-foreground">
-              {restaurantInfo.name}
-            </h1>
-            <p className="text-sm text-muted-foreground">
-              {restaurantInfo.tagline}
-            </p>
-          </div>
+          <ModeToggle />
         </div>
 
         {/* Quick Info */}

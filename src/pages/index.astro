@@ -3,7 +3,7 @@ import '../styles/global.css';
 import RestaurantMenu from '../components/RestaurantMenu';
 ---
 
-<html lang="es">
+<html lang="es" suppressHydrationWarning>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@ import RestaurantMenu from '../components/RestaurantMenu';
 		<meta name="description" content="Nuestra deliciosa carta digital con los mejores platos" />
 	</head>
 
-	<body class="dark bg-background text-foreground min-h-screen">
+	<body class="bg-background text-foreground min-h-screen">
 		<RestaurantMenu client:load />
 	</body>
 </html>

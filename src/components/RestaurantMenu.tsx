@@ -3,6 +3,7 @@ import { menuData } from '../data/menuData';
 import RestaurantHeader from './RestaurantHeader';
 import MenuItem from './MenuItem';
 import BottomNavigation from './BottomNavigation';
+import { ThemeProvider } from './ThemeProvider';
 
 export default function RestaurantMenu() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -26,19 +27,25 @@ export default function RestaurantMenu() {
     : menuData.find(cat => cat.id === activeCategory);
 
   return (
-    <div 
-      className="min-h-screen bg-background"
-      style={{ 
-        paddingBottom: 'var(--app-nav-height)' // Space for bottom nav
-      }}
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem
+      disableTransitionOnChange
     >
-      <RestaurantHeader
-        activeCategory={activeCategory}
-        categories={categories}
-        onCategoryClick={handleCategoryClick}
-      />
+      <div 
+        className="min-h-screen bg-background"
+        style={{ 
+          paddingBottom: 'var(--app-nav-height)' // Space for bottom nav
+        }}
+      >
+        <RestaurantHeader
+          activeCategory={activeCategory}
+          categories={categories}
+          onCategoryClick={handleCategoryClick}
+        />
 
-      <main className="px-4 py-6" ref={containerRef}>
+        <main className="px-4 py-6" ref={containerRef}>
         {/* Active Category Display */}
         <div className="mb-6">
           <h2 className="text-xl font-bold mb-2 text-foreground">
@@ -109,9 +116,10 @@ export default function RestaurantMenu() {
           )}
         </div>
 
-      </main>
+        </main>
 
-      <BottomNavigation />
-    </div>
+        <BottomNavigation />
+      </div>
+    </ThemeProvider>
   );
 }
