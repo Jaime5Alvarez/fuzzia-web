@@ -15,7 +15,6 @@ export default function RestaurantMenu() {
   }));
 
   const handleCategoryClick = (categoryId: string) => {
-    setActiveCategory(categoryId);
     
     // Scroll to category section
     const categoryElement = document.getElementById(`category-${categoryId}`);
