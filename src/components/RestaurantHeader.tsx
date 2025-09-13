@@ -61,7 +61,7 @@ export default function RestaurantHeader({
               onClick={() => onCategoryClick(category.id)}
               variant={activeCategory === category.id ? "default" : "outline"}
               size="sm"
-              className="flex-shrink-0 rounded-full min-w-fit border border-transparent data-[variant=outline]:border-border"
+              className="flex-shrink-0 rounded-full min-w-fit border data-[variant=outline]:border-border"
             >
               {category.name}
             </Button>
