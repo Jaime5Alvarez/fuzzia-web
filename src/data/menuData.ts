@@ -83,6 +83,106 @@ export const menuData: MenuCategory[] = [
     ]
   },
   {
+    id: 'del-mar',
+    name: 'Del Mar',
+    items: [
+      {
+        id: '11',
+        name: 'Pulpo a la Gallega',
+        description: 'Pulpo tierno cocido a la perfección con patatas, pimentón dulce y aceite de oliva',
+        price: 16.50,
+        image: 'https://images.unsplash.com/photo-1559847844-d9236bd72c44?w=400&h=300&fit=crop&crop=faces',
+        category: 'del-mar'
+      },
+      {
+        id: '12',
+        name: 'Paella de Mariscos',
+        description: 'Arroz bomba con langostinos, mejillones, almejas y calamar en sofrito mediterráneo',
+        price: 22.90,
+        image: 'https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=400&h=300&fit=crop&crop=faces',
+        category: 'del-mar'
+      },
+      {
+        id: '13',
+        name: 'Lubina a la Sal',
+        description: 'Lubina fresca cocinada en costra de sal marina con guarnición de verduras asadas',
+        price: 19.75,
+        image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop&crop=faces',
+        category: 'del-mar'
+      },
+      {
+        id: '14',
+        name: 'Gambas al Pil Pil',
+        description: 'Gambas rojas salteadas en aceite de oliva con ajo, guindilla y perejil fresco',
+        price: 14.80,
+        image: 'https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400&h=300&fit=crop&crop=faces',
+        category: 'del-mar'
+      },
+      {
+        id: '15',
+        name: 'Ceviche de Corvina',
+        description: 'Corvina fresca marinada en limón con cebolla morada, cilantro y ají amarillo',
+        price: 13.90,
+        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop&crop=faces',
+        category: 'del-mar'
+      }
+    ]
+  },
+  {
+    id: 'raciones',
+    name: 'Raciones',
+    items: [
+      {
+        id: '16',
+        name: 'Jamón Ibérico de Bellota',
+        description: 'Finas lonchas de jamón ibérico de bellota 100% puro cortado a cuchillo',
+        price: 18.50,
+        image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop&crop=faces',
+        category: 'raciones'
+      },
+      {
+        id: '17',
+        name: 'Tabla de Quesos Manchegos',
+        description: 'Selección de quesos manchegos curados, semicurados y tiernos con membrillo',
+        price: 14.90,
+        image: 'https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&h=300&fit=crop&crop=faces',
+        category: 'raciones'
+      },
+      {
+        id: '18',
+        name: 'Patatas Bravas Caseras',
+        description: 'Patatas fritas con salsa brava picante y alioli casero cremoso',
+        price: 6.80,
+        image: 'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=400&h=300&fit=crop&crop=faces',
+        category: 'raciones'
+      },
+      {
+        id: '19',
+        name: 'Croquetas de Jamón',
+        description: 'Croquetas cremosas de jamón serrano rebozadas en pan rallado y fritas',
+        price: 8.50,
+        image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&h=300&fit=crop&crop=faces',
+        category: 'raciones'
+      },
+      {
+        id: '20',
+        name: 'Pimientos de Padrón',
+        description: 'Pimientos verdes de Padrón salteados con sal gorda y aceite de oliva',
+        price: 7.25,
+        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=faces',
+        category: 'raciones'
+      },
+      {
+        id: '21',
+        name: 'Calamares a la Romana',
+        description: 'Anillas de calamar rebozadas en harina y fritas, servidas con limón',
+        price: 11.75,
+        image: 'https://images.unsplash.com/photo-1562967916-eb82221dfb38?w=400&h=300&fit=crop&crop=faces',
+        category: 'raciones'
+      }
+    ]
+  },
+  {
     id: 'drinks',
     name: 'Bebidas',
     items: [
