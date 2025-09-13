@@ -75,12 +75,8 @@ export default function RestaurantMenu() {
                   </div>
                 </div>
               ))}
-              {/* Total Summary */}
-              <div className="mt-8 mb-12 text-center">
-                <p className="text-sm text-muted-foreground">
-                  {activeCategoryData?.items.length} platos en total
-                </p>
-              </div>
+              {/* Spacing at the end */}
+              <div className="mt-8 mb-12" />
             </section>
           ) : (
             // Show single category
@@ -102,13 +98,8 @@ export default function RestaurantMenu() {
                         />
                       ))}
                     </div>
-
-                    {/* Category Summary */}
-                    <div className="mt-8 mb-12 text-center">
-                      <p className="text-sm text-muted-foreground">
-                        {category.items.length} platos en {category.name}
-                      </p>
-                    </div>
+                    {/* Spacing at the end */}
+                    <div className="mt-8 mb-12" />
                   </>
                 )}
               </section>
