@@ -215,7 +215,7 @@ export const menuData: MenuCategory[] = [
 ];
 
 export const restaurantInfo = {
-  name: 'Fuzzia',
+  name: 'La Fuzzia',
   tagline: 'Sabores auténticos, experiencias únicas',
   phone: '+34 123 456 789',
   address: 'Calle Principal 123, Madrid',
