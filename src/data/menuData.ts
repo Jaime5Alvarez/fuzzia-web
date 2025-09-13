@@ -91,7 +91,7 @@ export const menuData: MenuCategory[] = [
         name: 'Pulpo a la Gallega',
         description: 'Pulpo tierno cocido a la perfección con patatas, pimentón dulce y aceite de oliva',
         price: 16.50,
-        image: 'https://images.unsplash.com/photo-1559847844-d9236bd72c44?w=400&h=300&fit=crop&crop=faces',
+        image: 'https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=400&h=300&fit=crop&crop=center',
         category: 'del-mar'
       },
       {
