@@ -1,4 +1,4 @@
-import { ChefHat, MapPin, Clock } from 'lucide-react';
+import { ChefHat } from 'lucide-react';
 import { restaurantInfo } from '../data/menuData';
 import { ModeToggle } from './ModeToggle';
 import { Button } from './ui/button';
@@ -33,22 +33,6 @@ export default function RestaurantHeader({
             </div>
           </div>
           <ModeToggle />
-        </div>
-
-        {/* Quick Info */}
-        <div className="flex items-center gap-4 text-xs">
-          <div className="flex items-center gap-1">
-            <Clock size={12} className="text-muted-foreground" />
-            <span className="text-muted-foreground">
-              {restaurantInfo.hours}
-            </span>
-          </div>
-          <div className="flex items-center gap-1">
-            <MapPin size={12} className="text-muted-foreground" />
-            <span className="text-muted-foreground">
-              Entrega 20-30 min
-            </span>
-          </div>
         </div>
       </div>
 
