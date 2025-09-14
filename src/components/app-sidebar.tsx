@@ -25,7 +25,7 @@ export function AppSidebar({ currentPath }: AppSidebarProps) {
   // Información del restaurante
   const restaurantInfo = [
     {
-      title: "Carta",
+      title: "La Fuzzia Gastrobar Carta",
       url: "/",
       icon: UtensilsCrossed,
       path: "/"
