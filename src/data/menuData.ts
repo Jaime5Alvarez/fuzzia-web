@@ -215,9 +215,9 @@ export const menuData: MenuCategory[] = [
 ];
 
 export const restaurantInfo = {
-  name: 'La Fuzzia',
+  name: 'La Fuzzia Gastro Bar',
   tagline: 'Sabores auténticos, experiencias únicas',
-  phone: '+34 123 456 789',
-  address: 'Calle Principal 123, Madrid',
+  phone: '+34 948 92 76 15',
+  address: 'Plaza Vera Magallón, 19, San Adrián, Navarra',
   hours: 'Lun-Dom: 12:00 - 23:00'
 };
