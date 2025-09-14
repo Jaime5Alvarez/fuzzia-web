@@ -215,7 +215,7 @@ export const menuData: MenuCategory[] = [
         name: 'Tostada de jamón',
         description: 'Tomate, jamón ibérico, aceite de oliva virgen, café o infusión + mini zumo de naranja',
         price: 4.80,
-        image: '/jamon-iberico.jpg',
+        image: '/tostada-jamon.jpg',
         category: 'desayunos'
       },
       {
