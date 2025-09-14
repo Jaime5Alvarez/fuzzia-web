@@ -223,7 +223,7 @@ export const menuData: MenuCategory[] = [
         name: 'Tostada de salmón ahumado',
         description: 'Aguacate, salmón ahumado, sésamo, café o infusión + mini zumo de naranja',
         price: 4.85,
-        image: '/tostada-aguacate.jpg',
+        image: '/tostada-salmon.jpg',
         category: 'desayunos'
       }
     ]
