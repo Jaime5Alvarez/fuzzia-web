@@ -69,10 +69,10 @@ export function AppSidebar() {
             />
           </div>
           <div className="flex-1 min-w-0">
-            <h1 className="text-xl font-bold text-foreground truncate tracking-tight" style={{fontFamily: 'Playfair Display, Georgia, serif'}}>
+            <h1 className="text-xl font-bold text-foreground truncate tracking-tight">
               La Fuzzia
             </h1>
-            <p className="text-sm text-muted-foreground/80 truncate font-medium">
+            <p className="text-sm text-muted-foreground/80 truncate">
               Gastrobar
             </p>
           </div>
@@ -105,7 +105,7 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter>
-        <div className="p-2 text-xs text-muted-foreground text-center space-y-2">
+        <div className="p-3 text-xs text-muted-foreground text-center space-y-2">
       
             <p className="text-muted-foreground/80">Desarrollado por</p>
             <a 
