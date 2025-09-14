@@ -15,209 +15,171 @@ export interface MenuCategory {
 
 export const menuData: MenuCategory[] = [
   {
-    id: 'desserts',
-    name: 'Postres',
-    items: [
-      {
-        id: '1',
-        name: 'Omelette with cottage cheese and herbs',
-        description: 'Deliciosa tortilla con queso cottage fresco y hierbas aromáticas',
-        price: 9.00,
-        image: 'https://images.unsplash.com/photo-1581873372796-2d0bd7d95fce?w=400&h=300&fit=crop&crop=faces',
-        category: 'desserts'
-      },
-      {
-        id: '2', 
-        name: 'Avocado toast with poached egg',
-        description: 'Pan tostado artesanal con aguacate fresco y huevo pochado perfecto',
-        price: 10.50,
-        image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=300&fit=crop&crop=faces',
-        category: 'desserts'
-      },
-      {
-        id: '3',
-        name: 'Classic omelet with cheese',
-        description: 'Tortilla clásica con queso fundido y hierbas frescas de temporada',
-        price: 8.40,
-        image: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&h=300&fit=crop&crop=faces',
-        category: 'desserts'
-      },
-      {
-        id: '4',
-        name: 'Gourmet with berries and yogurt',
-        description: 'Mezcla gourmet con frutos rojos frescos y yogurt griego cremoso',
-        price: 12.00,
-        image: 'https://images.unsplash.com/photo-1546173159-315724a31696?w=400&h=300&fit=crop&crop=faces',
-        category: 'desserts'
-      }
-    ]
-  },
-  {
-    id: 'mains',
-    name: 'Platos Principales',
-    items: [
-      {
-        id: '5',
-        name: 'Pasta Carbonara Tradicional',
-        description: 'Pasta casera con panceta, huevo y queso parmesano auténtico',
-        price: 14.50,
-        image: 'https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=400&h=300&fit=crop&crop=faces',
-        category: 'mains'
-      },
-      {
-        id: '6',
-        name: 'Salmón a la Plancha',
-        description: 'Salmón fresco con vegetales de temporada y salsa de limón',
-        price: 18.90,
-        image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop&crop=faces',
-        category: 'mains'
-      },
-      {
-        id: '7',
-        name: 'Risotto de Hongos',
-        description: 'Risotto cremoso con hongos porcini y trufa negra',
-        price: 16.75,
-        image: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=400&h=300&fit=crop&crop=faces',
-        category: 'mains'
-      }
-    ]
-  },
-  {
-    id: 'del-mar',
-    name: 'Del Mar',
-    items: [
-      {
-        id: '11',
-        name: 'Pulpo a la Gallega',
-        description: 'Pulpo tierno cocido a la perfección con patatas, pimentón dulce y aceite de oliva',
-        price: 16.50,
-        image: 'https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=400&h=300&fit=crop&crop=center',
-        category: 'del-mar'
-      },
-      {
-        id: '12',
-        name: 'Paella de Mariscos',
-        description: 'Arroz bomba con langostinos, mejillones, almejas y calamar en sofrito mediterráneo',
-        price: 22.90,
-        image: 'https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=400&h=300&fit=crop&crop=faces',
-        category: 'del-mar'
-      },
-      {
-        id: '13',
-        name: 'Lubina a la Sal',
-        description: 'Lubina fresca cocinada en costra de sal marina con guarnición de verduras asadas',
-        price: 19.75,
-        image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop&crop=faces',
-        category: 'del-mar'
-      },
-      {
-        id: '14',
-        name: 'Gambas al Pil Pil',
-        description: 'Gambas rojas salteadas en aceite de oliva con ajo, guindilla y perejil fresco',
-        price: 14.80,
-        image: 'https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400&h=300&fit=crop&crop=faces',
-        category: 'del-mar'
-      },
-      {
-        id: '15',
-        name: 'Ceviche de Corvina',
-        description: 'Corvina fresca marinada en limón con cebolla morada, cilantro y ají amarillo',
-        price: 13.90,
-        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop&crop=faces',
-        category: 'del-mar'
-      }
-    ]
-  },
-  {
     id: 'raciones',
     name: 'Raciones',
     items: [
       {
-        id: '16',
-        name: 'Jamón Ibérico de Bellota',
-        description: 'Finas lonchas de jamón ibérico de bellota 100% puro cortado a cuchillo',
-        price: 18.50,
-        image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop&crop=faces',
+        id: '1',
+        name: 'Jamón Ibérico',
+        description: 'Corte fino de jamón ibérico, intenso en aroma y sabor.',
+        price: 18.90,
+        image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop&crop=center',
         category: 'raciones'
       },
       {
-        id: '17',
-        name: 'Tabla de Quesos Manchegos',
-        description: 'Selección de quesos manchegos curados, semicurados y tiernos con membrillo',
-        price: 14.90,
-        image: 'https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&h=300&fit=crop&crop=faces',
+        id: '2',
+        name: 'Cecina de León',
+        description: 'Delicada carne curada, llena de sabor, carácter y matices.',
+        price: 20.00,
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop&crop=center',
         category: 'raciones'
       },
       {
-        id: '18',
+        id: '3',
         name: 'Patatas Bravas Caseras',
-        description: 'Patatas fritas con salsa brava picante y alioli casero cremoso',
-        price: 6.80,
-        image: 'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=400&h=300&fit=crop&crop=faces',
+        description: 'Totalmente caseras, cortadas a mano y con nuestra deliciosa salsa especial.',
+        price: 7.00,
+        image: 'https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=400&h=300&fit=crop&crop=center',
         category: 'raciones'
       },
       {
-        id: '19',
-        name: 'Croquetas de Jamón',
-        description: 'Croquetas cremosas de jamón serrano rebozadas en pan rallado y fritas',
-        price: 8.50,
-        image: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&h=300&fit=crop&crop=faces',
+        id: '4',
+        name: 'Pimientos del Padrón',
+        description: 'Clásicos y perfectos para compartir.',
+        price: 8.95,
+        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=center',
         category: 'raciones'
       },
       {
-        id: '20',
-        name: 'Pimientos de Padrón',
-        description: 'Pimientos verdes de Padrón salteados con sal gorda y aceite de oliva',
-        price: 7.25,
-        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=faces',
-        category: 'raciones'
-      },
-      {
-        id: '21',
-        name: 'Calamares a la Romana',
-        description: 'Anillas de calamar rebozadas en harina y fritas, servidas con limón',
-        price: 11.75,
-        image: 'https://images.unsplash.com/photo-1562967916-eb82221dfb38?w=400&h=300&fit=crop&crop=faces',
+        id: '5',
+        name: 'Zamburiñas',
+        description: 'Un sabor marino inconfundible.',
+        price: 16.80,
+        image: 'https://images.unsplash.com/photo-1615800001652-dea216d9e4f7?w=400&h=300&fit=crop&crop=center',
         category: 'raciones'
       }
     ]
   },
   {
-    id: 'drinks',
-    name: 'Bebidas',
+    id: 'mar',
+    name: 'Mar',
     items: [
       {
+        id: '6',
+        name: 'Morro',
+        description: 'Bocados dorados y crujientes, ideales para acompañar con una caña bien fría.',
+        price: 7.80,
+        image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop&crop=center',
+        category: 'mar'
+      },
+      {
+        id: '7',
+        name: 'Torreznos',
+        description: 'Crujientes y sabrosos, con ese toque tradicional irresistible.',
+        price: 7.50,
+        image: 'https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?w=400&h=300&fit=crop&crop=center',
+        category: 'mar'
+      },
+      {
         id: '8',
-        name: 'Café Americano',
-        description: 'Café premium de origen único con notas de chocolate',
-        price: 3.50,
-        image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop&crop=faces',
-        category: 'drinks'
+        name: 'Langostinos a la Plancha',
+        description: 'Preparados a la plancha para resaltar su sabor natural.',
+        price: 14.50,
+        image: 'https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400&h=300&fit=crop&crop=center',
+        category: 'mar'
       },
       {
         id: '9',
-        name: 'Smoothie Tropical',
-        description: 'Batido natural con mango, piña y coco fresco',
-        price: 6.80,
-        image: 'https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=400&h=300&fit=crop&crop=faces',
-        category: 'drinks'
+        name: 'Anchoas del Cantábrico',
+        description: 'Intensas y sabrosas.',
+        price: 10.80,
+        image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop&crop=center',
+        category: 'mar'
       },
       {
         id: '10',
-        name: 'Limonada Artesanal',
-        description: 'Limonada fresca con menta y jengibre, endulzada naturalmente',
-        price: 4.25,
-        image: 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=400&h=300&fit=crop&crop=faces',
-        category: 'drinks'
+        name: 'Pulpo a la Gallega',
+        description: 'Muy tierno y aderezado con pimentón y patata.',
+        price: 21.50,
+        image: 'https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=400&h=300&fit=crop&crop=center',
+        category: 'mar'
+      }
+    ]
+  },
+  {
+    id: 'conservas',
+    name: 'Conservas',
+    items: [
+      {
+        id: '11',
+        name: 'Embuchado con Pimientos de Cristal',
+        description: 'Finas rodajas de embuchado acompañadas de pimientos de cristal, que realzan todo su sabor.',
+        price: 16.80,
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop&crop=center',
+        category: 'conservas'
+      },
+      {
+        id: '12',
+        name: 'Mejillones Gallegos en Escabeche',
+        description: 'Seleccionados en origen, marinados en escabeche para un sabor equilibrado.',
+        price: 10.80,
+        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop&crop=center',
+        category: 'conservas'
+      },
+      {
+        id: '13',
+        name: 'Sardinas Milésima',
+        description: 'Pequeños tesoros del mar, en conserva de la máxima calidad.',
+        price: 9.95,
+        image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop&crop=center',
+        category: 'conservas'
+      },
+      {
+        id: '14',
+        name: 'Zamburiñas en Salsa Vieira',
+        description: 'Con pan brioche, salsa de queso.',
+        price: 10.85,
+        image: 'https://images.unsplash.com/photo-1615800001652-dea216d9e4f7?w=400&h=300&fit=crop&crop=center',
+        category: 'conservas'
+      }
+    ]
+  },
+  {
+    id: 'ensaladas',
+    name: 'Ensaladas',
+    items: [
+      {
+        id: '15',
+        name: 'Ensalada de Ventresca',
+        description: 'Fresca y sorprendente.',
+        price: 13.80,
+        image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop&crop=center',
+        category: 'ensaladas'
+      },
+      {
+        id: '16',
+        name: 'Ensaladilla de Mejillones en Escabeche',
+        description: 'Con el toque especial de los mejillones gallegos.',
+        price: 9.85,
+        image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop&crop=center',
+        category: 'ensaladas'
+      },
+      {
+        id: '17',
+        name: 'Ensalada de Burrata',
+        description: 'Cremosidad acompañada de frescura y suavidad.',
+        price: 16.50,
+        image: 'https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=400&h=300&fit=crop&crop=center',
+        category: 'ensaladas'
       }
     ]
   }
 ];
 
 export const restaurantInfo = {
-  name: 'La Fuzzia Gastro Bar',
-  tagline: 'Sabores auténticos, experiencias únicas',
-  phone: '+34 948 92 76 15',
-  address: 'Plaza Vera Magallón, 19, San Adrián, Navarra',
-  hours: 'Lun-Dom: 12:00 - 23:00'
+  name: 'La Fuzzia',
+  tagline: 'Gastrobar',
+  phone: '+34 123 456 789',
+  address: 'Calle Principal 123, Ciudad',
+  hours: 'Lunes a Domingo: 12:00 - 23:00'
 };
