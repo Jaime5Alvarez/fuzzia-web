@@ -18,7 +18,7 @@ export default function MenuPage() {
               <h3 className="text-xl font-medium text-foreground tracking-tight">{category.name}</h3>
               <div className="flex-1 h-px bg-border opacity-60"></div>
             </div>
-            <div className="grid gap-3">
+            <div className="grid gap-3 lg:grid-cols-2 lg:gap-4">
               {category.items.map((item) => (
                 <MenuItem key={item.id} item={item} />
               ))}
