@@ -24,7 +24,6 @@ export default function ContactPage() {
   }
 
   const handleWhatsApp = () => {
-    console.log('WhatsApp')
     window.open('https://wa.me/34611614837', '_blank')
   }
 
