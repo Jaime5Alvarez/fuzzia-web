@@ -127,7 +127,7 @@ export default function RestaurantMenu() {
                   </BreadcrumbItem>
                   <BreadcrumbSeparator className="hidden md:block" />
                   <BreadcrumbItem>
-                    <BreadcrumbPage>Menú</BreadcrumbPage>
+                    <BreadcrumbPage>Carta</BreadcrumbPage>
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
@@ -142,7 +142,7 @@ export default function RestaurantMenu() {
                     onClick={() => handleCategoryClick(category.id)}
                     variant={activeCategory === category.id ? "default" : "outline"}
                     size="sm"
-                    className="flex-shrink-0 rounded-full min-w-fit border data-[variant=outline]:border-border font-medium px-4 py-2 transition-all duration-200 hover:scale-105"
+                    className="flex-shrink-0 rounded-full min-w-fit border data-[variant=outline]:border-border font-medium px-4 py-2"
                   >
                     {category.name}
                   </Button>

@@ -46,7 +46,7 @@ const mainNavItems = [
   },
 ]
 
-// Items del menú del restaurante - se generan dinámicamente desde menuData
+// Items del Carta del restaurante - se generan dinámicamente desde menuData
 const menuItems = menuData.map(category => ({
   title: category.name,
   url: `#category-${category.id}`,
@@ -117,9 +117,9 @@ export function AppSidebar() {
 
         <SidebarSeparator />
 
-        {/* Menú del Restaurante */}
+        {/* Carta del Restaurante */}
         <SidebarGroup>
-          <SidebarGroupLabel>Menú</SidebarGroupLabel>
+          <SidebarGroupLabel>Carta</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (
