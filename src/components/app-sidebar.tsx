@@ -69,7 +69,7 @@ export function AppSidebar() {
             />
           </div>
           <div className="flex-1 min-w-0">
-            <h1 className="text-xl font-bold text-foreground truncate tracking-tight">
+            <h1 className="text-xl font-bold text-foreground truncate tracking-tight" style={{fontFamily: 'Playfair Display, Georgia, serif'}}>
               La Fuzzia
             </h1>
             <p className="text-sm text-muted-foreground/80 truncate font-medium">

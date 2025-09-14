@@ -24,7 +24,7 @@ export default function MenuItem({ item }: MenuItemProps) {
         {/* Content */}
         <div className="flex-1 min-w-0">
           <div className="flex flex-col gap-1">
-            <h3 className="font-semibold text-sm leading-tight line-clamp-2 text-card-foreground">
+            <h3 className="font-medium text-base leading-tight line-clamp-2 text-card-foreground tracking-tight">
               {item.name}
             </h3>
             <p className="text-xs leading-relaxed line-clamp-2 text-muted-foreground">

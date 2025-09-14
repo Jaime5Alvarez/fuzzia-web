@@ -165,9 +165,9 @@ export default function RestaurantMenu() {
                   className="space-y-3"
                   style={{ scrollMarginTop: '140px' }} // CSS fallback for scroll offset
                 >
-                  <div className="flex items-center gap-2 mt-8 first:mt-0">
-                    <h3 className="text-lg font-semibold text-foreground">{category.name}</h3>
-                    <div className="flex-1 h-px bg-border"></div>
+                  <div className="flex items-center gap-4 mt-8 first:mt-0">
+                    <h3 className="text-xl font-medium text-foreground tracking-tight">{category.name}</h3>
+                    <div className="flex-1 h-px bg-border opacity-60"></div>
                   </div>
                   <div className="grid gap-3">
                     {category.items.map((item) => (
