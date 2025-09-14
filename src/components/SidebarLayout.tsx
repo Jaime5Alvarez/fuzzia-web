@@ -1,8 +1,9 @@
-import { useState, useRef, useEffect } from 'react';
-import { menuData } from '../data/menuData';
-import MenuItem from './MenuItem';
+import type { ReactNode } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeProvider } from './ThemeProvider';
-import { AppSidebar } from "./app-sidebar"
+import { AppSidebar } from "./app-sidebar";
+import { Button } from "./ui/button";
+import { menuData } from '../data/menuData';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -10,23 +11,28 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Separator } from "@/components/ui/separator"
-import { Button } from "@/components/ui/button"
+} from "./ui/breadcrumb"
+import { Separator } from "./ui/separator"
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/components/ui/sidebar"
+} from "./ui/sidebar"
 
-export default function RestaurantMenu() {
-  const [activeCategory, setActiveCategory] = useState(menuData[0]?.id || '');
-  const containerRef = useRef<HTMLDivElement>(null);
+interface SidebarLayoutProps {
+  children: ReactNode;
+  pageTitle: string;
+  currentPath: string;
+  showCategoriesNav?: boolean;
+}
 
-  const categories = menuData.map(category => ({
-    id: category.id,
-    name: category.name
-  }));
+const categories = menuData.map(category => ({
+  id: category.id,
+  name: category.name
+}));
+
+export function SidebarLayout({ children, pageTitle, currentPath, showCategoriesNav = false }: SidebarLayoutProps) {
+  const [activeCategory, setActiveCategory] = useState(categories[0]?.id || '');
 
   const handleCategoryClick = (categoryId: string) => {
     const categoryElement = document.getElementById(`category-${categoryId}`);
@@ -45,8 +51,10 @@ export default function RestaurantMenu() {
     }
   };
 
-  // Auto-highlight category based on scroll position
   useEffect(() => {
+    if (!showCategoriesNav) return;
+
+    // Auto-highlight category based on scroll position
     let observer: IntersectionObserver | null = null;
 
     const setupObserver = () => {
@@ -80,7 +88,7 @@ export default function RestaurantMenu() {
       observer = new IntersectionObserver(observerCallback, observerOptions);
 
       // Observe all category sections
-      const categoryElements = menuData.map(category => 
+      const categoryElements = categories.map(category => 
         document.getElementById(`category-${category.id}`)
       ).filter(Boolean);
 
@@ -98,7 +106,7 @@ export default function RestaurantMenu() {
         observer.disconnect();
       }
     };
-  }, []);
+  }, [showCategoriesNav]);
 
   return (
     <ThemeProvider
@@ -108,7 +116,7 @@ export default function RestaurantMenu() {
       disableTransitionOnChange
     >
       <SidebarProvider>
-        <AppSidebar />
+        <AppSidebar currentPath={currentPath} />
         <SidebarInset>
           <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
             {/* Top bar with sidebar trigger and breadcrumb */}
@@ -121,68 +129,42 @@ export default function RestaurantMenu() {
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem className="hidden md:block">
-                    <BreadcrumbLink href="#">
+                    <BreadcrumbLink href="/">
                       La Fuzzia
                     </BreadcrumbLink>
                   </BreadcrumbItem>
                   <BreadcrumbSeparator className="hidden md:block" />
                   <BreadcrumbItem>
-                    <BreadcrumbPage>Carta</BreadcrumbPage>
+                    <BreadcrumbPage>{pageTitle}</BreadcrumbPage>
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
             </div>
             
-            {/* Categories Navigation */}
-            <div className="px-4 py-3">
-              <div className="container mx-auto">
-                <div className="flex gap-2 overflow-x-auto scrollbar-hide">
-                  {categories.map((category) => (
-                    <Button
-                      key={category.id}
-                      onClick={() => handleCategoryClick(category.id)}
-                      variant={activeCategory === category.id ? "default" : "outline"}
-                      size="sm"
-                      className="flex-shrink-0 rounded-full min-w-fit border data-[variant=outline]:border-border font-medium px-4 py-2"
-                    >
-                      {category.name}
-                    </Button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </header>
-          
-          <main className="flex-1 flex flex-col gap-4 p-4 pt-0" ref={containerRef}>
-            <div className="container mx-auto">
-              {/* Menu Items */}
-              <div className="space-y-6">
-              {menuData.map((category) => (
-                <section 
-                  key={category.id} 
-                  id={`category-${category.id}`} 
-                  data-category={category.id}
-                  className="space-y-3"
-                  style={{ scrollMarginTop: '140px' }} // CSS fallback for scroll offset
-                >
-                  <div className="flex items-center gap-4 mt-8 first:mt-0">
-                    <h3 className="text-xl font-medium text-foreground tracking-tight">{category.name}</h3>
-                    <div className="flex-1 h-px bg-border opacity-60"></div>
-                  </div>
-                  <div className="grid gap-3">
-                    {category.items.map((item) => (
-                      <MenuItem
-                        key={item.id}
-                        item={item}
-                      />
+            {/* Categories Navigation - Only show on menu page */}
+            {showCategoriesNav && (
+              <div className="px-4 py-3">
+                <div className="container mx-auto">
+                  <div className="flex gap-2 overflow-x-auto scrollbar-hide">
+                    {categories.map((category) => (
+                      <Button
+                        key={category.id}
+                        onClick={() => handleCategoryClick(category.id)}
+                        variant={activeCategory === category.id ? "default" : "outline"}
+                        size="sm"
+                        className="flex-shrink-0 rounded-full min-w-fit border data-[variant=outline]:border-border font-medium px-4 py-2"
+                      >
+                        {category.name}
+                      </Button>
                     ))}
                   </div>
-                </section>
-              ))}
-                {/* Spacing at the end */}
-                <div className="mt-8 mb-12" />
+                </div>
               </div>
-            </div>
+            )}
+          </header>
+          
+          <main className="flex-1 flex flex-col gap-4 p-4 pt-0">
+            {children}
           </main>
         </SidebarInset>
       </SidebarProvider>

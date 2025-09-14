@@ -16,47 +16,39 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar"
 
-// Información del restaurante
-const restaurantInfo = [
-  {
-    title: "Carta",
-    url: "#carta",
-    icon: UtensilsCrossed,
-    action: () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-  },
-  {
-    title: "Ubicación",
-    url: "#ubicacion",
-    icon: MapPin,
-    action: () => {
-      // Aquí podrías abrir Google Maps o mostrar dirección
-      alert("📍 Calle Principal 123, Ciudad");
-    }
-  },
-  {
-    title: "Horarios",
-    url: "#horarios", 
-    icon: Clock,
-    action: () => {
-      alert("🕒 Lunes a Domingo: 12:00 - 23:00");
-    }
-  },
-  {
-    title: "Contacto",
-    url: "#contacto",
-    icon: Phone,
-    action: () => {
-      alert("📞 +34 123 456 789\n📧 info@lafuzzia.com");
-    }
-  },
-]
+interface AppSidebarProps {
+  currentPath: string
+}
 
-export function AppSidebar() {
+export function AppSidebar({ currentPath }: AppSidebarProps) {
+
+  // Información del restaurante
+  const restaurantInfo = [
+    {
+      title: "Carta",
+      url: "/",
+      icon: UtensilsCrossed,
+      path: "/"
+    },
+    {
+      title: "Ubicación",
+      url: "/ubicacion",
+      icon: MapPin,
+      path: "/ubicacion"
+    },
+    {
+      title: "Horarios",
+      url: "/horarios", 
+      icon: Clock,
+      path: "/horarios"
+    },
+    {
+      title: "Contacto",
+      url: "/contacto",
+      icon: Phone,
+      path: "/contacto"
+    },
+  ]
   return (
     <Sidebar>
       <SidebarHeader>
@@ -89,19 +81,22 @@ export function AppSidebar() {
               {restaurantInfo.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <button 
-                      onClick={item.action}
-                      className="w-full justify-start"
+                    <a 
+                      href={item.url}
+                      className={`flex items-center gap-3 w-full justify-start ${
+                        currentPath === item.path ? 'bg-primary text-primary-foreground' : ''
+                      }`}
                     >
                       <item.icon />
                       <span>{item.title}</span>
-                    </button>
+                    </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+
       </SidebarContent>
 
       <SidebarFooter>

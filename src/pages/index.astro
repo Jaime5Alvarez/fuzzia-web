@@ -1,25 +1,13 @@
 ---
-import '../styles/global.css';
-import RestaurantMenu from '../components/RestaurantMenu';
+import MainLayout from '../layouts/MainLayout.astro';
+import MenuPage from '../components/MenuPage';
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		
-		<!-- Google Fonts Premium -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
-		
-		<title>Fuzzia - Carta Digital</title>
-		<meta name="description" content="Nuestra deliciosa carta digital con los mejores platos" />
-	</head>
-
-	<body class="bg-background text-foreground min-h-screen">
-		<RestaurantMenu client:load />
-	</body>
-</html>
+<MainLayout 
+  title="Fuzzia - Carta Digital"
+  description="Nuestra deliciosa carta digital con los mejores platos"
+  pageTitle="Carta"
+  showCategoriesNav={true}
+>
+  <MenuPage client:load />
+</MainLayout>
