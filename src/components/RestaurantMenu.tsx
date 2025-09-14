@@ -135,25 +135,28 @@ export default function RestaurantMenu() {
             
             {/* Categories Navigation */}
             <div className="px-4 py-3">
-              <div className="flex gap-2 overflow-x-auto scrollbar-hide">
-                {categories.map((category) => (
-                  <Button
-                    key={category.id}
-                    onClick={() => handleCategoryClick(category.id)}
-                    variant={activeCategory === category.id ? "default" : "outline"}
-                    size="sm"
-                    className="flex-shrink-0 rounded-full min-w-fit border data-[variant=outline]:border-border font-medium px-4 py-2"
-                  >
-                    {category.name}
-                  </Button>
-                ))}
+              <div className="container mx-auto">
+                <div className="flex gap-2 overflow-x-auto scrollbar-hide">
+                  {categories.map((category) => (
+                    <Button
+                      key={category.id}
+                      onClick={() => handleCategoryClick(category.id)}
+                      variant={activeCategory === category.id ? "default" : "outline"}
+                      size="sm"
+                      className="flex-shrink-0 rounded-full min-w-fit border data-[variant=outline]:border-border font-medium px-4 py-2"
+                    >
+                      {category.name}
+                    </Button>
+                  ))}
+                </div>
               </div>
             </div>
           </header>
           
           <main className="flex-1 flex flex-col gap-4 p-4 pt-0" ref={containerRef}>
-            {/* Menu Items */}
-            <div className="space-y-6">
+            <div className="container mx-auto">
+              {/* Menu Items */}
+              <div className="space-y-6">
               {menuData.map((category) => (
                 <section 
                   key={category.id} 
@@ -176,8 +179,9 @@ export default function RestaurantMenu() {
                   </div>
                 </section>
               ))}
-              {/* Spacing at the end */}
-              <div className="mt-8 mb-12" />
+                {/* Spacing at the end */}
+                <div className="mt-8 mb-12" />
+              </div>
             </div>
           </main>
         </SidebarInset>
