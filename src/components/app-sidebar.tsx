@@ -50,8 +50,8 @@ export function AppSidebar({ currentPath }: AppSidebarProps) {
     },
   ]
   return (
-    <Sidebar>
-      <SidebarHeader>
+    <Sidebar variant="floating">
+      <SidebarHeader > 
         <div className="flex items-center gap-4 px-3 py-4  mx-2 my-2 ">
           <div className="w-12 h-12 rounded-full overflow-hidden">
             <img 
