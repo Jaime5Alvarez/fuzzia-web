@@ -32,7 +32,7 @@ const categories = menuData.map(category => ({
 }));
 
 export function SidebarLayout({ children, pageTitle, currentPath, showCategoriesNav = false }: SidebarLayoutProps) {
-  const [activeCategory, setActiveCategory] = useState(categories[0]?.id || '');
+  const [activeCategory, setActiveCategory] = useState('raciones');
 
   const handleCategoryClick = (categoryId: string) => {
     const categoryElement = document.getElementById(`category-${categoryId}`);

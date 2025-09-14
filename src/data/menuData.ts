@@ -173,6 +173,60 @@ export const menuData: MenuCategory[] = [
         category: 'ensaladas'
       }
     ]
+  },
+  {
+    id: 'desayunos',
+    name: 'Desayunos',
+    items: [
+      {
+        id: 'tostada-dulce',
+        name: 'Tostada dulce',
+        description: 'Mantequilla y mermelada, café o infusión + mini zumo de naranja',
+        price: 4.85,
+        image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop&crop=center',
+        category: 'desayunos'
+      },
+      {
+        id: 'croissant-plancha',
+        name: 'Croissant a la plancha',
+        description: 'Mantequilla y mermelada, café o infusión + mini zumo de naranja',
+        price: 4.80,
+        image: 'https://images.unsplash.com/photo-1555507036-ab794f4139ba?w=400&h=300&fit=crop&crop=center',
+        category: 'desayunos'
+      },
+      {
+        id: 'reposteria',
+        name: 'Repostería',
+        description: 'Napolitana o mariposa o trenza, café o infusión + mini zumo de naranja',
+        price: 4.70,
+        image: 'https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400&h=300&fit=crop&crop=center',
+        category: 'desayunos'
+      },
+      {
+        id: 'tostada-aguacate',
+        name: 'Tostada de aguacate',
+        description: 'Tomate, jamón, aguacate, huevo y semillas, café o infusión + mini zumo de naranja',
+        price: 4.95,
+        image: 'https://images.unsplash.com/photo-1525351326368-efbb5cb6814d?w=400&h=300&fit=crop&crop=center',
+        category: 'desayunos'
+      },
+      {
+        id: 'tostada-jamon',
+        name: 'Tostada de jamón',
+        description: 'Tomate, jamón ibérico, aceite de oliva virgen, café o infusión + mini zumo de naranja',
+        price: 4.80,
+        image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=300&fit=crop&crop=center',
+        category: 'desayunos'
+      },
+      {
+        id: 'tostada-salmon',
+        name: 'Tostada de salmón ahumado',
+        description: 'Aguacate, salmón ahumado, sésamo, café o infusión + mini zumo de naranja',
+        price: 4.85,
+        image: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&h=300&fit=crop&crop=center',
+        category: 'desayunos'
+      }
+    ]
   }
 ];
 

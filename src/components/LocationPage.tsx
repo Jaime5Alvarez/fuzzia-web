@@ -22,14 +22,14 @@ export default function LocationPage() {
           <div>
             <p className="text-lg font-medium">La Fuzzia Gastrobar</p>
             <p className="text-muted-foreground">
-              Plaza Vera Magallón, 19<br />
+              Plaza Vera Magallón, 19 bajo 4<br />
               31570 San Adrián<br />
               Navarra, España
             </p>
           </div>
           
           <button 
-            onClick={() => window.open('https://maps.google.com/?q=Plaza+Vera+Magallón+19+San+Adrián+Navarra+España', '_blank')}
+            onClick={() => window.open('https://maps.google.com/?q=Plaza+Vera+Magallón+19+bajo+4+San+Adrián+Navarra+España', '_blank')}
             className="w-full md:w-auto flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             <Navigation className="w-4 h-4" />
