@@ -31,7 +31,7 @@ export const menuData: MenuCategory[] = [
         name: 'Cecina de León',
         description: 'Delicada carne curada, llena de sabor, carácter y matices.',
         price: 20.00,
-        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop&crop=center',
+        image: '/cecina.png',
         category: 'raciones'
       },
       {
@@ -56,6 +56,14 @@ export const menuData: MenuCategory[] = [
         description: 'Un sabor marino inconfundible.',
         price: 16.80,
         image: 'https://images.unsplash.com/photo-1615800001652-dea216d9e4f7?w=400&h=300&fit=crop&crop=center',
+        category: 'raciones'
+      },
+      {
+        id: '11',
+        name: 'Embuchado con Pimientos de Cristal',
+        description: 'Finas rodajas de embuchado acompañadas de pimientos de cristal, que realzan todo su sabor.',
+        price: 16.80,
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop&crop=center',
         category: 'raciones'
       }
     ]
@@ -110,14 +118,6 @@ export const menuData: MenuCategory[] = [
     id: 'conservas',
     name: 'Conservas',
     items: [
-      {
-        id: '11',
-        name: 'Embuchado con Pimientos de Cristal',
-        description: 'Finas rodajas de embuchado acompañadas de pimientos de cristal, que realzan todo su sabor.',
-        price: 16.80,
-        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop&crop=center',
-        category: 'conservas'
-      },
       {
         id: '12',
         name: 'Mejillones Gallegos en Escabeche',
