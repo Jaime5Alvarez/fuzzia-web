@@ -80,12 +80,10 @@ export function AppSidebar({ currentPath }: AppSidebarProps) {
             <SidebarMenu>
               {restaurantInfo.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton asChild isActive={currentPath === item.path}>
                     <a 
                       href={item.url}
-                      className={`flex items-center gap-3 w-full justify-start ${
-                        currentPath === item.path ? 'bg-primary text-primary-foreground' : ''
-                      }`}
+                      className="flex items-center gap-3 w-full justify-start"
                     >
                       <item.icon />
                       <span>{item.title}</span>
