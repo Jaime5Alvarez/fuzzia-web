@@ -23,7 +23,7 @@ export const menuData: MenuCategory[] = [
         name: 'Jamón Ibérico',
         description: 'Corte fino de jamón ibérico, intenso en aroma y sabor.',
         price: 18.90,
-        image: '/jamon-iberico.png',
+        image: '/jamon-iberico.jpg',
         category: 'raciones'
       },
       {
@@ -31,7 +31,7 @@ export const menuData: MenuCategory[] = [
         name: 'Cecina de León',
         description: 'Delicada carne curada, llena de sabor, carácter y matices.',
         price: 20.00,
-        image: '/cecina.png',
+        image: '/cecina.jpg',
         category: 'raciones'
       },
       {
@@ -39,7 +39,7 @@ export const menuData: MenuCategory[] = [
         name: 'Patatas Bravas Caseras',
         description: 'Totalmente caseras, cortadas a mano y con nuestra deliciosa salsa especial.',
         price: 7.00,
-        image: '/patatas-bravas.png',
+        image: '/patatas-bravas.jpg',
         category: 'raciones'
       },
       {
@@ -47,7 +47,7 @@ export const menuData: MenuCategory[] = [
         name: 'Pimientos del Padrón',
         description: 'Clásicos y perfectos para compartir.',
         price: 8.95,
-        image: '/pimientos-padron.png',
+        image: '/pimientos-padron.jpg',
         category: 'raciones'
       },
       {
@@ -55,7 +55,7 @@ export const menuData: MenuCategory[] = [
         name: 'Zamburiñas',
         description: 'Un sabor marino inconfundible.',
         price: 16.80,
-        image: '/zamburiñas.png',
+        image: '/zamburiñas.jpg',
         category: 'raciones'
       },
       {
@@ -63,7 +63,7 @@ export const menuData: MenuCategory[] = [
         name: 'Embuchado con Pimientos de Cristal',
         description: 'Finas rodajas de embuchado acompañadas de pimientos de cristal, que realzan todo su sabor.',
         price: 16.80,
-        image: '/embuchado-pimientos.png',
+        image: '/embuchado-pimientos.jpg',
         category: 'raciones'
       }
     ]
@@ -77,7 +77,7 @@ export const menuData: MenuCategory[] = [
         name: 'Morro',
         description: 'Bocados dorados y crujientes, ideales para acompañar con una caña bien fría.',
         price: 7.80,
-        image: '/morro.png',
+        image: '/morro.jpg',
         category: 'mar'
       },
       {
@@ -85,7 +85,7 @@ export const menuData: MenuCategory[] = [
         name: 'Torreznos',
         description: 'Crujientes y sabrosos, con ese toque tradicional irresistible.',
         price: 7.50,
-        image: '/torreznos.png',
+        image: '/torreznos.jpg',
         category: 'mar'
       },
       {
@@ -93,7 +93,7 @@ export const menuData: MenuCategory[] = [
         name: 'Langostinos a la Plancha',
         description: 'Preparados a la plancha para resaltar su sabor natural.',
         price: 14.50,
-        image: '/langostinos-plancha.png',
+        image: '/langostinos-plancha.jpg',
         category: 'mar'
       },
       {
@@ -101,7 +101,7 @@ export const menuData: MenuCategory[] = [
         name: 'Anchoas del Cantábrico',
         description: 'Intensas y sabrosas.',
         price: 10.80,
-        image: '/anchoas.png',
+        image: '/anchoas.jpg',
         category: 'mar'
       },
       {
@@ -109,7 +109,7 @@ export const menuData: MenuCategory[] = [
         name: 'Pulpo a la Gallega',
         description: 'Muy tierno y aderezado con pimentón y patata.',
         price: 21.50,
-        image: '/pulpo.png',
+        image: '/pulpo.jpg',
         category: 'mar'
       }
     ]
@@ -123,7 +123,7 @@ export const menuData: MenuCategory[] = [
         name: 'Mejillones Gallegos en Escabeche',
         description: 'Seleccionados en origen, marinados en escabeche para un sabor equilibrado.',
         price: 10.80,
-        image: '/mejillones.png',
+        image: '/mejillones.jpg',
         category: 'conservas'
       },
       {
@@ -131,7 +131,7 @@ export const menuData: MenuCategory[] = [
         name: 'Sardinas Milésima',
         description: 'Pequeños tesoros del mar, en conserva de la máxima calidad.',
         price: 9.95,
-        image: '/sardinas.png',
+        image: '/sardinas.jpg',
         category: 'conservas'
       },
       {
@@ -139,7 +139,7 @@ export const menuData: MenuCategory[] = [
         name: 'Zamburiñas en Salsa Vieira',
         description: 'Con pan brioche, salsa de queso.',
         price: 10.85,
-        image: '/zamburiñas-conserva.png',
+        image: '/zamburiñas-conserva.jpg',
         category: 'conservas'
       }
     ]
@@ -153,7 +153,7 @@ export const menuData: MenuCategory[] = [
         name: 'Ensalada de Ventresca',
         description: 'Fresca y sorprendente.',
         price: 13.80,
-        image: '/ensalada-ventresca.png',
+        image: '/ensalada-ventresca.jpg',
         category: 'ensaladas'
       },
       {
@@ -161,7 +161,7 @@ export const menuData: MenuCategory[] = [
         name: 'Ensaladilla de Mejillones en Escabeche',
         description: 'Con el toque especial de los mejillones gallegos.',
         price: 9.85,
-        image: '/ensaladilla-mejillones.png',
+        image: '/ensaladilla-mejillones.jpg',
         category: 'ensaladas'
       },
       {
@@ -169,7 +169,7 @@ export const menuData: MenuCategory[] = [
         name: 'Ensalada de Burrata',
         description: 'Cremosidad acompañada de frescura y suavidad.',
         price: 16.50,
-        image: '/ensalada-burrata.png',
+        image: '/ensalada-burrata.jpg',
         category: 'ensaladas'
       }
     ]
@@ -183,7 +183,7 @@ export const menuData: MenuCategory[] = [
         name: 'Tostada dulce',
         description: 'Mantequilla y mermelada, café o infusión + mini zumo de naranja',
         price: 4.85,
-        image: '/tostada-dulce.png',
+        image: '/tostada-dulce.jpg',
         category: 'desayunos'
       },
       {
@@ -199,7 +199,7 @@ export const menuData: MenuCategory[] = [
         name: 'Repostería',
         description: 'Napolitana o mariposa o trenza, café o infusión + mini zumo de naranja',
         price: 4.70,
-        image: '/napolitana.png',
+        image: '/napolitana.jpg',
         category: 'desayunos'
       },
       {
@@ -207,7 +207,7 @@ export const menuData: MenuCategory[] = [
         name: 'Tostada de aguacate',
         description: 'Tomate, jamón, aguacate, huevo y semillas, café o infusión + mini zumo de naranja',
         price: 4.95,
-        image: '/tostada-aguacate.png',
+        image: '/tostada-aguacate.jpg',
         category: 'desayunos'
       },
       {
@@ -215,7 +215,7 @@ export const menuData: MenuCategory[] = [
         name: 'Tostada de jamón',
         description: 'Tomate, jamón ibérico, aceite de oliva virgen, café o infusión + mini zumo de naranja',
         price: 4.80,
-        image: '/jamon-iberico.png',
+        image: '/jamon-iberico.jpg',
         category: 'desayunos'
       },
       {
@@ -223,7 +223,7 @@ export const menuData: MenuCategory[] = [
         name: 'Tostada de salmón ahumado',
         description: 'Aguacate, salmón ahumado, sésamo, café o infusión + mini zumo de naranja',
         price: 4.85,
-        image: '/tostada-aguacate.png',
+        image: '/tostada-aguacate.jpg',
         category: 'desayunos'
       }
     ]
