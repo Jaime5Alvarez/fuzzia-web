@@ -60,8 +60,8 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <div className="flex items-center gap-3 px-2 py-2">
-          <div className="w-10 h-10 rounded-full overflow-hidden">
+        <div className="flex items-center gap-4 px-3 py-4  mx-2 my-2 ">
+          <div className="w-12 h-12 rounded-full overflow-hidden">
             <img 
               src="/la-fuzzia-logo.png" 
               alt="La Fuzzia Logo"
@@ -69,10 +69,10 @@ export function AppSidebar() {
             />
           </div>
           <div className="flex-1 min-w-0">
-            <h1 className="text-lg font-bold text-foreground truncate">
+            <h1 className="text-xl font-bold text-foreground truncate tracking-tight">
               La Fuzzia
             </h1>
-            <p className="text-xs text-muted-foreground truncate">
+            <p className="text-sm text-muted-foreground/80 truncate font-medium">
               Gastrobar
             </p>
           </div>
