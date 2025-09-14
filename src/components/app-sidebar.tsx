@@ -126,9 +126,18 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter>
-        <div className="p-2 text-xs text-muted-foreground text-center">
-          <p>© 2024 La Fuzzia</p>
-          <p>Todos los derechos reservados</p>
+        <div className="p-2 text-xs text-muted-foreground text-center space-y-2">
+      
+            <p className="text-muted-foreground/80">Desarrollado por</p>
+            <a 
+              href="https://www.linkedin.com/in/jaime-alvarez-b0441b241/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors duration-200 font-medium"
+            >
+              Jaime Álvarez
+            </a>
+            <p className="text-muted-foreground/70 text-[10px] mt-1">Software Developer</p>
         </div>
       </SidebarFooter>
     </Sidebar>
