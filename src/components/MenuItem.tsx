@@ -7,7 +7,7 @@ interface MenuItemProps {
 
 export default function MenuItem({ item }: MenuItemProps) {
   return (
-    <Card className="overflow-hidden transition-all duration-200 hover:scale-[1.02] hover:shadow-lg">
+    <Card className="">
       <CardContent className="flex gap-4 p-4">
         {/* Image */}
         <div 
