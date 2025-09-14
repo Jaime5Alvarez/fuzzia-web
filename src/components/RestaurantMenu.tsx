@@ -93,7 +93,7 @@ export default function RestaurantMenu() {
     <ThemeProvider
       attribute="class"
       defaultTheme="dark"
-      enableSystem
+      forcedTheme="dark"
       disableTransitionOnChange
     >
       <div 
