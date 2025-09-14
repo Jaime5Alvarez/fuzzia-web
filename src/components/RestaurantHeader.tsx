@@ -1,4 +1,4 @@
-import { ChefHat } from 'lucide-react';
+// Logo importado desde public
 import { restaurantInfo } from '../data/menuData';
 import { ModeToggle } from './ModeToggle';
 import { Button } from './ui/button';
@@ -20,8 +20,12 @@ export default function RestaurantHeader({
       <div className="px-4 py-4">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-full bg-primary text-primary-foreground">
-              <ChefHat size={20} />
+            <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+              <img 
+                src="/la-fuzzia-logo.png" 
+                alt="La Fuzzia Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h1 className="text-2xl font-bold text-foreground">
