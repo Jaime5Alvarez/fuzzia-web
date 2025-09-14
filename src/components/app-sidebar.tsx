@@ -1,7 +1,6 @@
 "use client"
 
-import { Home, ShoppingBag, Search, User, Heart, UtensilsCrossed, MapPin, Phone, Clock } from "lucide-react"
-import { menuData } from '../data/menuData';
+import { UtensilsCrossed, MapPin, Phone, Clock } from "lucide-react"
 
 import {
   Sidebar,
@@ -17,58 +16,44 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar"
 
-// Items de navegación principal
-const mainNavItems = [
-  {
-    title: "Inicio",
-    url: "#",
-    icon: Home,
-  },
-  {
-    title: "Buscar",
-    url: "#",
-    icon: Search,
-  },
-  {
-    title: "Favoritos",
-    url: "#",
-    icon: Heart,
-  },
-  {
-    title: "Carrito",
-    url: "#",
-    icon: ShoppingBag,
-  },
-  {
-    title: "Mi Perfil",
-    url: "#",
-    icon: User,
-  },
-]
-
-// Items del Carta del restaurante - se generan dinámicamente desde menuData
-const menuItems = menuData.map(category => ({
-  title: category.name,
-  url: `#category-${category.id}`,
+// Enlace único a la carta completa
+const cartaLink = {
+  title: "Carta",
   icon: UtensilsCrossed,
-}))
+  action: () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+}
 
 // Información del restaurante
 const restaurantInfo = [
   {
     title: "Ubicación",
-    url: "#",
+    url: "#ubicacion",
     icon: MapPin,
-  },
-  {
-    title: "Contacto",
-    url: "#",
-    icon: Phone,
+    action: () => {
+      // Aquí podrías abrir Google Maps o mostrar dirección
+      alert("📍 Calle Principal 123, Ciudad");
+    }
   },
   {
     title: "Horarios",
-    url: "#",
+    url: "#horarios", 
     icon: Clock,
+    action: () => {
+      alert("🕒 Lunes a Domingo: 12:00 - 23:00");
+    }
+  },
+  {
+    title: "Contacto",
+    url: "#contacto",
+    icon: Phone,
+    action: () => {
+      alert("📞 +34 123 456 789\n📧 info@lafuzzia.com");
+    }
   },
 ]
 
@@ -96,58 +81,21 @@ export function AppSidebar() {
       </SidebarHeader>
 
       <SidebarContent>
-        {/* Navegación Principal */}
+        {/* Enlace a la Carta */}
         <SidebarGroup>
-          <SidebarGroupLabel>Navegación</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {mainNavItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        <SidebarSeparator />
-
-        {/* Carta del Restaurante */}
-        <SidebarGroup>
-          <SidebarGroupLabel>Carta</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {menuItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <button 
-                      onClick={() => {
-                        const categoryElement = document.getElementById(`category-${item.url.replace('#category-', '')}`);
-                        if (categoryElement) {
-                          const headerElement = document.querySelector('header');
-                          const headerHeight = headerElement ? headerElement.offsetHeight : 120;
-                          const elementPosition = categoryElement.offsetTop;
-                          const offsetPosition = elementPosition - headerHeight - 16;
-                          
-                          window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                          });
-                        }
-                      }}
-                      className="w-full justify-start"
-                    >
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </button>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <button 
+                    onClick={cartaLink.action}
+                    className="w-full justify-start"
+                  >
+                    <cartaLink.icon />
+                    <span>{cartaLink.title}</span>
+                  </button>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
@@ -162,10 +110,13 @@ export function AppSidebar() {
               {restaurantInfo.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <button 
+                      onClick={item.action}
+                      className="w-full justify-start"
+                    >
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </button>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
