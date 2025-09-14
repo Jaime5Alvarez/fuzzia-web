@@ -16,20 +16,19 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar"
 
-// Enlace único a la carta completa
-const cartaLink = {
-  title: "Carta",
-  icon: UtensilsCrossed,
-  action: () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-}
-
 // Información del restaurante
 const restaurantInfo = [
+  {
+    title: "Carta",
+    url: "#carta",
+    icon: UtensilsCrossed,
+    action: () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  },
   {
     title: "Ubicación",
     url: "#ubicacion",
@@ -74,37 +73,17 @@ export function AppSidebar() {
               La Fuzzia
             </h1>
             <p className="text-xs text-muted-foreground truncate">
-              Restaurante Italiano
+              Gastrobar
             </p>
           </div>
         </div>
       </SidebarHeader>
 
       <SidebarContent>
-        {/* Enlace a la Carta */}
-        <SidebarGroup>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <button 
-                    onClick={cartaLink.action}
-                    className="w-full justify-start"
-                  >
-                    <cartaLink.icon />
-                    <span>{cartaLink.title}</span>
-                  </button>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
         <SidebarSeparator />
-
         {/* Información del Restaurante */}
         <SidebarGroup>
-          <SidebarGroupLabel>Restaurante</SidebarGroupLabel>
+          <SidebarGroupLabel>Secciones</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {restaurantInfo.map((item) => (
