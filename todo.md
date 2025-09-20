@@ -1,0 +1,5 @@
+- [] Poner modo oscuro
+- Arreglar activated item en sidebar
+- Arreglar scroll horizontal al mover hacia abajo en las categorias
+- arreglar truncate
+- que se parezca al shushi de calahorra

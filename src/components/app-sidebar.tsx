@@ -21,6 +21,8 @@ interface AppSidebarProps {
 }
 
 export function AppSidebar({ currentPath }: AppSidebarProps) {
+  // Normalizar currentPath para comparación consistente
+  const normalizedCurrentPath = currentPath.replace(/\/$/, '') || '/';
 
   // Información del restaurante
   const restaurantInfo = [
@@ -80,7 +82,7 @@ export function AppSidebar({ currentPath }: AppSidebarProps) {
             <SidebarMenu>
               {restaurantInfo.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild isActive={currentPath === item.path}>
+                  <SidebarMenuButton asChild isActive={normalizedCurrentPath === item.path}>
                     <a 
                       href={item.url}
                       className="flex items-center gap-3 w-full justify-start"
