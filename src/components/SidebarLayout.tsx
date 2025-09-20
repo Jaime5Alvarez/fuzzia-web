@@ -35,6 +35,25 @@ const categories = menuData.map(category => ({
 export function SidebarLayout({ children, pageTitle, currentPath, showCategoriesNav = false }: SidebarLayoutProps) {
   const [activeCategory, setActiveCategory] = useState('raciones');
 
+  // Función para hacer scroll al botón activo
+  const scrollToActiveCategory = (categoryId: string) => {
+    const activeButton = document.querySelector(`[data-category-button="${categoryId}"]`) as HTMLElement;
+    const scrollContainer = document.querySelector('[data-categories-scroll]') as HTMLElement;
+    
+    if (activeButton && scrollContainer) {
+      const containerRect = scrollContainer.getBoundingClientRect();
+      const buttonRect = activeButton.getBoundingClientRect();
+      
+      // Calcular la posición de scroll necesaria
+      const scrollLeft = activeButton.offsetLeft - (containerRect.width / 2) + (buttonRect.width / 2);
+      
+      scrollContainer.scrollTo({
+        left: scrollLeft,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const handleCategoryClick = (categoryId: string) => {
     const categoryElement = document.getElementById(`category-${categoryId}`);
     
@@ -82,6 +101,8 @@ export function SidebarLayout({ children, pageTitle, currentPath, showCategories
           const categoryId = maxEntry.target.getAttribute('data-category');
           if (categoryId) {
             setActiveCategory(categoryId);
+            // Hacer scroll al botón activo con un pequeño delay
+            setTimeout(() => scrollToActiveCategory(categoryId), 100);
           }
         }
       };
@@ -99,7 +120,11 @@ export function SidebarLayout({ children, pageTitle, currentPath, showCategories
     };
 
     // Small delay to ensure DOM elements are ready
-    const timer = setTimeout(setupObserver, 200);
+    const timer = setTimeout(() => {
+      setupObserver();
+      // Scroll inicial a la categoría activa
+      scrollToActiveCategory(activeCategory);
+    }, 200);
 
     return () => {
       clearTimeout(timer);
@@ -149,7 +174,7 @@ export function SidebarLayout({ children, pageTitle, currentPath, showCategories
             {showCategoriesNav && (
               <div className="px-4 py-3">
                 <div className="container mx-auto">
-                  <div className="flex gap-2 overflow-x-auto scrollbar-hide">
+                  <div className="flex gap-2 overflow-x-auto scrollbar-hide" data-categories-scroll>
                     {categories.map((category) => (
                       <Button
                         key={category.id}
@@ -157,6 +182,7 @@ export function SidebarLayout({ children, pageTitle, currentPath, showCategories
                         variant={activeCategory === category.id ? "default" : "outline"}
                         size="sm"
                         className="flex-shrink-0 rounded-full min-w-fit border data-[variant=outline]:border-border font-medium px-4 py-2"
+                        data-category-button={category.id}
                       >
                         {category.name}
                       </Button>
