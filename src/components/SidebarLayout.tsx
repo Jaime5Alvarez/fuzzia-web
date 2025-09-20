@@ -193,7 +193,7 @@ export function SidebarLayout({ children, pageTitle, currentPath, showCategories
             )}
           </header>
           
-          <main className="flex-1 flex flex-col gap-4 p-4 pt-0">
+          <main className="flex-1 flex flex-col p-4 pt-0 pb-6">
             {children}
           </main>
         </SidebarInset>

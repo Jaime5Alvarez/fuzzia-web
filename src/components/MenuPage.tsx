@@ -25,8 +25,6 @@ export default function MenuPage() {
             </div>
           </section>
         ))}
-        {/* Spacing at the end */}
-        <div className="mt-8 mb-12" />
       </div>
     </div>
   );
