@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
 import { ThemeProvider } from './ThemeProvider';
+import { ThemeToggle } from './ThemeToggle';
 import { AppSidebar } from "./app-sidebar";
 import { Button } from "./ui/button";
 import { menuData } from '../data/menuData';
@@ -111,8 +112,8 @@ export function SidebarLayout({ children, pageTitle, currentPath, showCategories
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="dark"
-      forcedTheme="dark"
+      defaultTheme="system"
+      enableSystem
       disableTransitionOnChange
     >
       <SidebarProvider>
@@ -139,6 +140,9 @@ export function SidebarLayout({ children, pageTitle, currentPath, showCategories
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
+              <div className="ml-auto">
+                <ThemeToggle />
+              </div>
             </div>
             
             {/* Categories Navigation - Only show on menu page */}
